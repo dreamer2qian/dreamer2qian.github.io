@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Go初体验 - Dreamer</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="dreamer,go web"> 
+    <meta name="description" content="to share ,to be happy.,
+学习GO在学GO之前，在GitHub上见到许多使用GO写的优秀项目比如caddy,frp等
+通过GO写出来的程序，可以直接编译到其它平台上面，这点给我感觉GO十分强大至少省去编译链配置，给路由器写,"> 
+    <meta name="author" content="dreamer"> 
+    <link rel="alternative" href="atom.xml" title="Dreamer" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Dreamer</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://dreamer2q.wang"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">Go初体验</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">Go初体验</h1>
+        <div class="stuff">
+            <span>十月 26, 2019</span>
+            
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/golang/">golang</a></li></ul>
+
+
+        </div>
+        <div class="content markdown">
+            <p><img src="https://i.loli.net/2019/10/18/lGJpr6NOuTPEtVM.jpg" alt="1.jpg"></p>
+<h1 id="学习GO"><a href="#学习GO" class="headerlink" title="学习GO"></a>学习GO</h1><p>在学GO之前，在GitHub上见到许多使用GO写的优秀项目<br>比如caddy,frp等</p>
+<p>通过GO写出来的程序，可以直接编译到其它平台上面，这点给我感觉GO十分强大<br>至少省去编译链配置，给路由器写个插件什么的，都很方便的!</p>
+<p>虽然一直想学GO，但总因为各种原因推迟。<br>直到社团任务下来，总算有了动力，加上校运会的偷闲，<br>有了时间学习Go了,也算填坑了吧。</p>
+<p>初入Go语言，给我感觉就是C语言语法的减缩版，<br>自己完全把它当成C语言来对待。但是后面发现，除了语法和C语言相似外，<br>其功能可比C语言强大许多。</p>
+<p>最鲜明的特点就是Go语言支持多个返回值。<br>多个返回值，让Go的程序看起来很优雅，程序员也需要“优雅”</p>
+<p>此外，支持<br>‘ a,b = b,a<br>的交换变量值方式，让Go语言看起来更接近自然语言<br>进一步降低学习成本。而且Go语言虽然支持指针，但不会像C语言指针满天飞。</p>
+<p>还有就是switch语句中case不用break结尾，真是方便，因为break语句容易忘记写。<br>还有就是case匹配也不局限与C语言的值匹配，Go处理的更灵活，更有风度。</p>
+<p>然后，就是Go语言的面向对象了。<br>对于C++我一直觉得很难，因为C++里面面向对象实在有点让人摸不着头脑。<br>太多东西要学了….</p>
+<p>相对的Go抛弃许多面向对象的特性，仅仅使用很少特性就实现面向对象(这点我理解不够)<br>就是学习成本很低了。啦啦…</p>
+<h1 id="网站开发"><a href="#网站开发" class="headerlink" title="网站开发"></a>网站开发</h1><h3 id="hello-go"><a href="#hello-go" class="headerlink" title="hello.go"></a>hello.go</h3><p class="code-caption" data-lang="go" data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy="Copy Code"><span class="code-caption-label"></span><a class="code-caption-copy">Copy Code</a></p>
+
+<pre><code class="go">func helloHandler(w http.ResponseWrite,r ****http.Request){
+  io.WriteString(w,&quot;Hello, world!&quot;)
+}
+
+func main(){
+  http.HandleFunc(&quot;/&quot;,helloHandler)
+  err := http.ListenAndServe(&quot;:80&quot;,nil)
+  if err != nil {
+    log.Fatal(&quot;ListenAndServe:&quot;.err.Error())
+  }
+}</code></pre>
+<p><em>Go web demo</em></p>
+<p>Go仅用几行代码就实现一个httpServer<br>用法简单，十分友好</p>
+<h1 id="Go-end"><a href="#Go-end" class="headerlink" title="Go end"></a>Go end</h1>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='3ea49587bf8b79a8192b'
+        data-cs='29899b5cfd0ffb34ba91a3753f46bb1def652738'
+        data-r='dreamer2qian.github.io'
+        data-o='dreamer2qian'
+        data-a='dreamer2qian'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>

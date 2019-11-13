@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>一道还不会做的题目 - Dreamer</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="dreamer,ol"> 
+    <meta name="description" content="to share ,to be happy.,
+引入这是社团面试的题目
+题目如下
+
+贪心的黄老板又到了月底，黄老板的手头开始紧张，所以他计划在各个城市之间打起了赚钱的想法。想 用 x 元 钱去买 a 物品，再 把 a 物品 拿到另一个城市去贩卖,"> 
+    <meta name="author" content="dreamer"> 
+    <link rel="alternative" href="atom.xml" title="Dreamer" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+    <link rel="stylesheet" href="/css/diaspora.css">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+    <link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.6.0/styles/github.min.css">
+    <script src="//cdn.bootcss.com/highlight.js/9.6.0/highlight.min.js"></script>
+</head>
+</html>
+<body class="loading">
+    <span id="config-title" style="display:none">Dreamer</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="icon-home image-icon" href="javascript:;" data-url="https://dreamer2q.wang"></a>
+    <div title="播放/暂停" class="icon-play"></div>
+    <h3 class="subtitle">一道还不会做的题目</h3>
+    <div class="social">
+        <!--<div class="like-icon">-->
+            <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+        <!--</div>-->
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <div class="article">
+    <div class='main'>
+        <h1 class="title">一道还不会做的题目</h1>
+        <div class="stuff">
+            <span>十月 28, 2019</span>
+            
+
+        </div>
+        <div class="content markdown">
+            <p><img src="https://i.loli.net/2019/10/29/KzsN4lWAnwpGCLM.jpg" alt="19.jpg"></p>
+<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>这是社团面试的题目</p>
+<p>题目如下</p>
+<blockquote>
+<h1 id="贪心的黄老板"><a href="#贪心的黄老板" class="headerlink" title="贪心的黄老板"></a>贪心的黄老板</h1><p>又到了月底，黄老板的手头开始紧张，所以他计划在各个城市之间打起了赚钱的想法。<br>想 用 x 元 钱去买 a 物品，再 把 a 物品 拿到另一个城市去贩卖，在买 b 物品 以此进行下<br>去 最后再把东西卖了 ，得到最大利润（不计任何其他一切费用 任务物品可以分割为<br>很细小的一块，同时，每个物品或钱最多只能进行一次买卖，特别请注意：一旦将物品<br>转换为钱，则交易就结束了 。<br>输入描述: 每组数据第一行输入一个n（n&lt;=10000）（表示x元钱）和一个m（m&lt;=10000） （表示接下来有m组兑换关系） 接下来有m组数据a,b,c（0&lt;=a,b&lt;=1000000,0&lt;=c&lt;=2；输入过程中当a或b为0时表示为钱）<br>注意：输入中没给出的兑换关系表示不能兑换，兑换过程中物品都将全部兑换，兑换过<br>程中不会出现循环。<br>***输出描述: 输出黄老板最后能赚到的最多的钱数。（保留2位有效数字；最后结果中不会超过2^31 – 1） </p>
+<h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><p>5000 5<br>0 1 1.2<br>1 2 1.3<br>1 3 1.4<br>2 0 1.4<br>3 0 1.5 </p>
+<h3 id="输出样例：-12600-00"><a href="#输出样例：-12600-00" class="headerlink" title="输出样例： 12600.00"></a>输出样例： 12600.00</h3><blockquote>
+<p>提示：本题解法不唯一。参考解法如下：建议先了解数据结构中的图结构对所有数据进<br>行建模，再对数据进行整理并利用动态规划求利润最大值。（想想本题的数据可以用哪<br>种图建模，对应着哪个经典算法？）</p>
+</blockquote>
+</blockquote>
+<h1 id="尝试解答"><a href="#尝试解答" class="headerlink" title="尝试解答"></a>尝试解答</h1><p>对于目前还没有系统学习数据结果和算法的菜鸟来说，我只会用递归来解。</p>
+<p>代码如下(代码高亮有问题…to be fixed)</p>
+<p class="code-caption" data-lang data-line_number="frontend" data-trim_indent="backend" data-label_position="outer" data-labels_left="Code" data-labels_right=":" data-labels_copy="Copy Code"><span class="code-caption-label"></span><a class="code-caption-copy">Copy Code</a></p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+typedef struct{
+  int a;
+  int b;
+  double rate;
+} Trans;
+
+int cur;
+
+double getMaxSum(Trans *T,double sum,int n,int s){ 
+  double max=sum;
+  bool moved = false;
+  for(int i=s;i&lt;n;++i){
+      if(cur == T[i].a){
+            moved = true;
+            double tmp;
+            cur = T[i].b;
+            if(cur == 0){
+                    tmp = sum*T[i].rate;
+                  }else{
+                          tmp = getMaxSum(T,sum*T[i].rate,n,0);
+                          if (tmp &lt; 0){
+                                    moved = false;
+                                  } 
+                                }
+                  if(max &lt; tmp){
+                          max = tmp;
+                        }
+                        cur = T[i].a;
+                            }
+        }
+    if (!moved &amp;&amp; max == sum){
+        return -1;  
+      }
+      return max;
+}
+
+int main(){
+  double sum;
+  int m;
+  scanf(&quot;%lf %d&quot;,&amp;sum,&amp;m);
+  Trans T[m];
+  for (int i=0;i&lt;m;i++){
+      int a,b;
+      double r;
+      scanf(&quot;%d %d %lf&quot;,&amp;a,&amp;b,&amp;r);
+      T[i].a = a;
+      T[i].b = b;
+      T[i].rate = r;
+    } 
+
+    printf(&quot;%.2lf&quot;,getMaxSum(T,sum,m,0));
+
+      return 0;
+}</code></pre><p>然而代码可以过社团搭建oj，却过不了学习的oj<br>一定有问题的。<br>不过暂时的我发现不出来。</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>需要拓扑排序+动态规划</p>
+<p>但是目前技能点有限，实在无法顾及。</p>
+<p>等有时间再把这个坑填上去吧。</p>
+<h1 id="To-be-continued"><a href="#To-be-continued" class="headerlink" title="To be continued"></a>To be continued</h1><p><img src="https://i.loli.net/2019/10/18/lGJpr6NOuTPEtVM.jpg" alt="11.jpg"></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+                <ul id="audio-list" style="display:none">
+                    
+                        <li title='0' data-url='http://link.hhtjim.com/163/5146554.mp3'></li>
+                    
+                        <li title='1' data-url='http://link.hhtjim.com/qq/001faIUs4M2zna.mp3'></li>
+                    
+                </ul>
+            
+        </div>
+        
+    <div id='gitalk-container' class="comment link"
+        data-ae='false'
+        data-ci='3ea49587bf8b79a8192b'
+        data-cs='29899b5cfd0ffb34ba91a3753f46bb1def652738'
+        data-r='dreamer2qian.github.io'
+        data-o='dreamer2qian'
+        data-a='dreamer2qian'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+
+</body>
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/diaspora.js"></script>
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</html>
